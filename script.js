@@ -3,7 +3,7 @@ let isLoading = false
 
 // DOM References
 const cityInput        = document.querySelector('#cityInput')
-const searchBtn        = document.querySelector('#searchButton') // Fixed: matches HTML id
+const searchBtn        = document.querySelector('#searchBtn') // Fixed: matches HTML id
 const errMsg           = document.querySelector('#err')
 const loaderWrap       = document.querySelector('#loader')
 const mainOverlay      = document.querySelector('#mainOverlay')
