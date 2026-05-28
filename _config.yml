@@ -1,3 +1,0 @@
-# Tell Jekyll to copy your videos folder into the final website build
-include:
-  - videos
