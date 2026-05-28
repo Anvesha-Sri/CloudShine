@@ -18,15 +18,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Create NoJekyll File
+        run: touch .nojekyll # Forces GitHub to completely turn off Jekyll processing
+
+      - name: List Files for Verification
+        run: ls -la # Debug step: verifies your 'videos' folder is present in logs
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the entire root directory including all media folders
-          path: '.' 
+          path: '.' # Forces upload of the entire directory, including media folders
 
   deploy:
     environment:
@@ -37,4 +44,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
