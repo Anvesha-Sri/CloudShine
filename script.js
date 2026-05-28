@@ -20,17 +20,17 @@ const forecastDiv      = document.querySelector('#forecast')
 
 // 🎥 VIDEO BACKGROUND
 const videoMap = {
-    Clear:        'Videos/clear.mp4',
-    Sunny:        'Videos/sunny.mp4',
-    Rain:         'Videos/drizzle.mp4',
-    Drizzle:      'Videos/drizzle.mp4',
-    Thunderstorm: 'Videos/thunder.mp4',
-    Snow:         'Videos/snow.mp4',
-    Mist:         'Videos/mist.mp4',
-    Fog:          'Videos/mist.mp4',
-    Haze:         'Videos/mist.mp4',
-    Smoke:        'Videos/mist.mp4',
-    Default:      'Videos/default.mp4'
+    Clear:        './Videos/clear.mp4',
+    Sunny:        './Videos/sunny.mp4',
+    Rain:         './Videos/drizzle.mp4',
+    Drizzle:      './Videos/drizzle.mp4',
+    Thunderstorm: './Videos/thunder.mp4',
+    Snow:         './Videos/snow.mp4',
+    Mist:         './Videos/mist.mp4',
+    Fog:          './Videos/mist.mp4',
+    Haze:         './Videos/mist.mp4',
+    Smoke:        './Videos/mist.mp4',
+    Default:      './Videos/default.mp4'
 }
 
 let activeVideo = 'A'
