@@ -19,21 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2 # Fixed version wrapper
 
       - name: Create NoJekyll File
-        run: touch .nojekyll # Forces GitHub to completely turn off Jekyll processing
+        run: touch .nojekyll 
 
       - name: List Files for Verification
-        run: ls -la # Debug step: verifies your 'videos' folder is present in logs
+        run: ls -la 
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5.0.0 # Fixed version wrapper
 
       - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.1.0 # Fixed version wrapper
         with:
-          path: '.' # Forces upload of the entire directory, including media folders
+          path: '.' 
 
   deploy:
     environment:
@@ -44,4 +44,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5 # Fixed version wrapper
